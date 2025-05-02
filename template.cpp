@@ -1,64 +1,36 @@
-//g++ datatypes.cpp -o datatypes.exe
+// g++ datatypes.cpp -o datatypes.exe
 //.\datatypes.exe
-//g++ templates.cpp
+// g++ templates.cpp
 //./a.out<in.txt >out.txt
-
 
 // g++ template.cpp -o a.exe
 // a.exe < in.txt > out.txt
 
-
-#include<bits\stdc++.h>
+#include <bits\stdc++.h>
 using namespace std;
 #define endl '\n'
-#define FOR(i,a,b) for(int i=(a);i<(b);i++)
-#define FORk(i,a,b,k) for(int i=(a);i<(b);i+=k)
-#define RFOR(i,a,b) for(int i=(a);i>=(b);i--)
-#define RFORK(i,a,b,k) for(int i=(a);i>=(b);i-=k) 
-
+#define FOR(i, a, b) for (int i = (a); i < (b); i++)
+#define FORk(i, a, b, k) for (int i = (a); i < (b); i += k)
+#define RFOR(i, a, b) for (int i = (a); i >= (b); i--)
+#define RFORK(i, a, b, k) for (int i = (a); i >= (b); i -= k)
 
 void solve()
 {
-  int n;
-  cin>>n;
-    if(n==1){
-      cout<<"no"<<endl;
-      return;
-    }
-    if(n==2){
-      cout<<"yes"<<endl;
-      return;
-    }
-    if(n==3){
-      cout<<"yes"<<endl;
-      return;
-    }
-   
-    FOR(i,sqrt(n),n){
-      if(n%i==0){
-        cout<<"no"<<endl;
-        return;
-      }
-    }
-    cout<<"yes"<<endl;
 }
 
-int main(){
+int main()
+{
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  int t=1;
-  cin>>t;
+  int t = 1;
+  cin >> t;
   while (t--)
   {
     solve();
   }
   return 0;
 }
-
-
-
-
 
 // #include <bits/stdc++.h>
 // using namespace std;

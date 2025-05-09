@@ -1,6 +1,4 @@
-// @Author: Mars_Coder
-// @date: 15-12-2024 Sun 08:45 PM
-// https://codeforces.com/problemset/problem/2044/C
+
 
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
@@ -235,7 +233,7 @@ int XOR1toN(int N)
 {
   int md = N % 4;
   return md == 0 ? N : (md == 3 ? 0 : (md == 2 ? N + 1 : 1));
-}                                                                         // O(1) T.C.
+} // O(1) T.C.
 int XORLtoR(int L, int R) { return XOR1toN(R) ^ XOR1toN(max(L - 1, 0)); } // xor from range L to R - O(1)
 
 template <typename T>

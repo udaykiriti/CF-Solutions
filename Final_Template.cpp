@@ -1,3 +1,11 @@
+// Template for competitive programming
+// Snippets
+// template
+// fcpp
+// cptemplate
+// cpp
+// cp
+
 #include <bits/stdc++.h>
 using namespace std;
 

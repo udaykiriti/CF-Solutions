@@ -14,22 +14,40 @@ using namespace std;
 #define RFOR(i, a, b) for (int i = (a); i >= (b); i--)
 #define RFORK(i, a, b, k) for (int i = (a); i >= (b); i -= k)
 
+#define multicases \
+  int t;           \
+  cin >> t;        \
+  while (t--)      \
+    solve();
+
+#define EXIT return 0;
+
+#define scan(x) cin >> x;
+#define print(x) cout << x << endl;
+
+#define int long long
+#define U unsigned int
+
+const int MOD = 1000000007;
+const int MAX = 1000005;
+
 void solve()
 {
 }
 
-int main()
+void FastIO()
 {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
-  int t = 1;
-  cin >> t;
-  while (t--)
-  {
-    solve();
-  }
-  return 0;
+}
+
+int main(void)
+{
+  FastIO();
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+  multicases EXIT
 }
 
 // #include <bits/stdc++.h>
@@ -68,44 +86,6 @@ int main()
 //     freopen ("input.txt","r",stdin);
 //     freopen ("output.txt","w",stdout);
 //     */
-
-//     int n,i,arr[5001],a,b,c;
-
-//     while (sf ("%d",&n) != EOF)
-//     {
-//         set <int> mySet;
-
-//         for (i=0; i<n; i++)
-//         {
-//             sf ("%d",&arr[i]);
-//             mySet.in(arr[i]);
-//         }
-
-//         if (mySet.size () < 3)
-//             pf ("NO\n");
-//         else
-//         {
-//             mySet.clear ();
-//             bool k = false;
-
-//             for (i=0; i<n; i++)
-//             {
-//                 a = arr[i];
-//                 b = arr[a-1];
-//                 c = arr[b-1];
-
-//                 if ((a != b) && (b != c) && (c != a) && arr[c-1] == a)
-//                 {
-//                     k = true;
-//                     pf ("YES\n");
-//                     break;
-//                 }
-//             }
-
-//             if (!k)
-//                 pf ("NO\n");
-//         }
-//     }
 
 //     return 0;
 // }

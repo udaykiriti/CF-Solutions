@@ -9,7 +9,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define fast ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
+#define FastIO ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
 
 #define FOR(i, a, b) for (int i = (a); i < (b); i++)
 #define FORk(i, a, b, k) for (int i = (a); i < (b); i += k)
@@ -95,9 +95,7 @@ ll factorialMod(ll n, ll mod)
 {
   ll result = 1;
   for (ll i = 1; i <= n; i++)
-  {
     result = (result * i) % mod;
-  }
   return result;
 }
 
@@ -109,12 +107,10 @@ void solve()
 
 int main(int argc, char const *argv[])
 {
-  fast;
+  FastIO;
   int t;
   cin >> t;
   while (t--)
-  {
     solve();
-  }
   EXIT
 }

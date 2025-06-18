@@ -1,5 +1,6 @@
 #include <vector>
 #include <algorithm>
+using namespace std;
 int countPrimes(int n)
 {
   if (n <= 2)

@@ -1,23 +1,24 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-  int n; cin>>n;
-  vector<int>vec(n);
-  for (int i = 0; i < n; i++) cin>>vec[i];
+#define endl '\n'
+#define FastIO() ios_base::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr);
+#define FOR(i, a, b) for (int i = (a); i <= (b); i++)
+#define FORk(i, a, b, k) for (int i = (a); i <= (b); i += (k))
+#define RFOR(i, a, b) for (int i = (a); i >= (b); i--)
+#define RFORK(i, a, b, k) for (int i = (a); i >= (b); i -= (k))
 
-  int first=INT32_MIN,second=INT32_MIN;
+void solve() {
+  // Your solution logic here
+}
 
-  for (int i = 0; i < n; i++)
-  {
-    if(vec[i]>first){
-      second=first;
-      first=vec[i];
-    }
-    else if(vec[i]>second&&vec[i]!=first){
-      second=vec[i];
-    }
-  }
-  if(second==INT32_MIN) cout<<"NOT";
-  else cout<<second;
+int main() {
+  FastIO();
+  //int t = 1;
+  // cin >> t;
+  // while (t--) {
+  //   solve();
+  // }
+  cout<<16%-7<<endl;
+  return 0;
 }

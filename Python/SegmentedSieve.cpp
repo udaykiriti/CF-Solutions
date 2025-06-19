@@ -100,6 +100,7 @@ const int msm = 31623; // sqrt(1e9)
 bool pr[msm + 1];
 bool p[100001];
 vi prs;
+vector<int> vec;
 
 void sieve()
 {

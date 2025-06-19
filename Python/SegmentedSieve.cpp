@@ -119,7 +119,6 @@ void seg_seive(int N, int M)
 {
   for (int i = 0; i <= M - N; i++)
     p[i] = true;
-
   if (N == 1)
     p[0] = false;
 
@@ -128,7 +127,6 @@ void seg_seive(int N, int M)
   {
     if (i > sm)
       break;
-
     int x = max(i * i, ((N + i - 1) / i) * i);
     for (int j = x; j <= M; j += i)
       p[j - N] = false;

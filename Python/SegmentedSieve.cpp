@@ -144,7 +144,6 @@ void solve()
   seg_seive(n, m);
   cout << '\n';
 }
-
 int main()
 {
   FAST_IO;

@@ -114,7 +114,7 @@ void solve()
     cout << "NO" << endl;
 }
 
-int main()
+int main()  
 {
   FAST_IO;
   int t = 1;

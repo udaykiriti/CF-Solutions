@@ -1,91 +1,129 @@
-// g++ datatypes.cpp -o datatypes.exe
-//.\datatypes.exe
-// g++ templates.cpp
-//./a.out<in.txt >out.txt
-
-// g++ template.cpp -o a.exe
-// a.exe < in.txt > out.txt
-
-#include <bits\stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
+
+#define FAST_IO                \
+  ios::sync_with_stdio(false); \
+  cin.tie(0);                  \
+  cout.tie(0)
 #define endl '\n'
-#define FOR(i, a, b) for (int i = (a); i < (b); i++)
-#define FORk(i, a, b, k) for (int i = (a); i < (b); i += k)
-#define RFOR(i, a, b) for (int i = (a); i >= (b); i--)
-#define RFORK(i, a, b, k) for (int i = (a); i >= (b); i -= k)
 
-#define multicases \
-  int t;           \
-  cin >> t;        \
-  while (t--)      \
-    solve();
+#define FOR(i, a, b) for (int i = (a); i < (b); ++i)
+#define RFOR(i, a, b) for (int i = (a); i >= (b); --i)
+#define REP(i, n) FOR(i, 0, n)
+#define RREP(i, n) RFOR(i, n - 1, 0)
 
-#define EXIT return 0;
+#define pb push_back
+#define eb emplace_back
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
 
-#define scan(x) cin >> x;
-#define print(x) cout << x << endl;
+#define fi first
+#define se second
+#define mp make_pair
+#define sz(x) (int)(x).size()
 
-#define int long long
-#define U unsigned int
+#define MOD 1000000007
+#define INF 1e18
+#define PI acos(-1)
+#define EPS 1e-9
 
-const int MOD = 1000000007;
-const int MAX = 1000005;
+#define fraction(d) cout << fixed << setprecision(d)
+#define debug(x) cerr << #x << " = " << x << endl
+#define debugVec(v)    \
+  cerr << #v << " = "; \
+  for (auto &u : v)    \
+    cerr << u << " ";  \
+  cerr << endl
 
+// Short Types
+using ll = long long;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+using vi = vector<int>;
+using vll = vector<ll>;
+using vb = vector<bool>;
+using mii = map<int, int>;
+using si = set<int>;
+
+// Math Utils
+inline bool isEven(int x) { return x % 2 == 0; }
+inline bool isOdd(int x) { return x % 2 != 0; }
+inline ll sqr(ll x) { return x * x; }
+inline ll cube(ll x) { return x * x * x; }
+ll gcd(ll a, ll b) { return __gcd(a, b); }
+ll lcm(ll a, ll b) { return a / gcd(a, b) * b; }
+
+// Fast power modulo
+ll powerMod(ll base, ll exp, ll mod = MOD)
+{
+  ll res = 1;
+  while (exp > 0)
+  {
+    if (exp & 1)
+      res = (res * base) % mod;
+    base = (base * base) % mod;
+    exp >>= 1;
+  }
+  return res;
+}
+
+// Factorial modulo
+ll factorialMod(ll n, ll mod = MOD)
+{
+  ll res = 1;
+  for (ll i = 1; i <= n; ++i)
+    res = (res * i) % mod;
+  return res;
+}
+
+// Prime check
+bool isPrime(int n)
+{
+  if (n <= 1)
+    return false;
+  for (int i = 2; i * i <= n; ++i)
+    if (n % i == 0)
+      return false;
+  return true;
+}
+// gcd
+
+// Bit tricks
+#define popcount(x) __builtin_popcountll(x)
+#define ctz(x) __builtin_ctzll(x)
+#define clz(x) __builtin_clzll(x)
+#define parity(x) __builtin_parityll(x)
+
+int gcd(int a, int b)
+{
+  if (b == 0)
+    return a;
+  return (b, a % b);
+}
+
+// Solve Function
 void solve()
 {
+  // Write logic here
+  int a, b, c;
+  cin >> a >> b >> c;
+  int g = gcd(max(a, b), min(a, b));
+  if (c % g == 0)
+    cout << "Yes" << endl;
+  else
+    cout << "NO" << endl;
 }
 
-void FastIO()
+int main()
 {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+  FAST_IO;
+  int t = 1;
+  cin >> t;
+  while (t--)
+  {
+    cout << "Case " << t << ": ";
+    solve();
+  }
+
+  return 0;
 }
-
-int main(void)
-{
-  FastIO();
-  freopen("input.txt", "r", stdin);
-  freopen("output.txt", "w", stdout);
-  multicases EXIT
-}
-
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// #define sf scanf
-// #define pf printf
-// #define ssf sscanf
-// #define spf sprintf
-// #define fsf fscanf
-// #define fpf fprintf
-// #define fast ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
-// #define scase sf ("%d",&tc)
-// #define sn sf ("%d",&n)
-// #define whilecase while (tc--)
-// #define eof while (cin >> n)
-// #define forloop for (pos=1; pos<=tc; pos++)
-// #define arrayloop (i=0; i<n; i++)
-// #define cinstr cin >> str
-// #define getstr getline (cin,str)
-// #define pcase pf ("Case %d: ",pos)
-// #define pii pair <int,int>
-// #define pb push_back
-// #define in insert
-// #define llu unsigned long long
-// #define lld long long
-// #define U unsigned int
-// #define endl "\n"
-
-// const int MOD = 1000000007;
-// const int MAX = 1000005;
-
-// int main (void)
-// {
-//     /*
-//     freopen ("input.txt","r",stdin);
-//     freopen ("output.txt","w",stdout);
-//     */
-
-//     return 0;
-// }

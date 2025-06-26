@@ -16,9 +16,6 @@ using namespace std;
 #define RFOR(i, a, b) for (int i = (a); i >= (b); i--)
 #define RFORK(i, a, b, k) for (int i = (a); i >= (b); i -= k)
 
-#define f(i, s, e) for (long long int i = s; i < e; i++)
-#define cf(i, s, e) for (long long int i = s; i <= e; i++)
-#define rf(i, e, s) for (long long int i = e - 1; i >= s; i--)
 
 #define pb push_back
 #define eb emplace_back

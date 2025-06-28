@@ -101,6 +101,3 @@ int main()
 }
 
 /* Main() Ends Here */
-  }
-typedef unsigned long long int uint64;
-typedef long long int int64;

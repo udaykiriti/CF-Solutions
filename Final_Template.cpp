@@ -1,11 +1,3 @@
-// Template for competitive programming
-// Snippets
-// template
-// fcpp
-// cptemplate
-// cpp
-// cp
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,7 +7,6 @@ using namespace std;
 #define FORk(i, a, b, k) for (int i = (a); i < (b); i += k)
 #define RFOR(i, a, b) for (int i = (a); i >= (b); i--)
 #define RFORK(i, a, b, k) for (int i = (a); i >= (b); i -= k)
-
 
 #define pb push_back
 #define eb emplace_back
@@ -51,7 +42,7 @@ using namespace std;
     cout << u << " ";  \
   cout << endl;
 
-#define EXIT return 0;
+#define EXIT return 0
 
 #define ll long long
 #define pii pair<int, int>
@@ -105,9 +96,7 @@ void solve()
 int main(int argc, char const *argv[])
 {
   FastIO;
-  int t;
-  cin >> t;
-  while (t--)
-    solve();
-  EXIT
+  int t; cin >> t;
+  while (t--) solve();
+  EXIT;
 }

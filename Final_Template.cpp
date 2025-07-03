@@ -65,18 +65,18 @@ bool isPrime(int n) {
     return true;
 }
 
-ll powerMod(ll base, ll exp, ll mod)
-{
-  ll result = 1;
-  while (exp > 0)
-  {
-    if (exp % 2 == 1)
-      result = (result * base) % mod;
-    base = (base * base) % mod;
-    exp /= 2;
-  }
-  return result;
+ll powerMod(ll base, ll exp, ll mod) {
+    ll result = 1;
+    base %= mod; 
+    while (exp > 0) {
+        if (exp & 1)  
+            result = (__int128(result) * base) % mod; 
+        base = (__int128(base) * base) % mod;
+        exp >>= 1; 
+    }
+    return result;
 }
+
 
 ll factorialMod(ll n, ll mod)
 {

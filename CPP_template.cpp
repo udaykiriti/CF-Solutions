@@ -13,7 +13,6 @@ using namespace __gnu_pbds;
 #define END_TIMER auto end_time = chrono::high_resolution_clock::now(); \
     cerr << "Time: " << chrono::duration<double, milli>(end_time - start_time).count() << " ms"<<endl;
 
-
 // Typedefs
 using ll = long long;
 using i64 = long long;
@@ -49,7 +48,6 @@ using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statisti
 
 // Fast I/O
 #define FastIO() ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-
 
 // Output Utilities
 #define FIXED(x) cout << fixed << setprecision(x)

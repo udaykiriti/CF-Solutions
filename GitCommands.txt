@@ -86,3 +86,100 @@ git push origin main
 # Optionally delete:
 git branch -d feature-xyz
 git push origin --delete feature-xyz
+
+⚔️ Git Merge Conflict Resolution Cheat Sheet
+============================================
+
+🔍 Detecting Conflicts
+----------------------
+To merge or pull and possibly create conflicts:
+    git pull origin <branch>
+    # or
+    git merge <branch>
+
+If there are conflicts, Git will show:
+    CONFLICT (content): Merge conflict in <file>
+    Automatic merge failed; fix conflicts and then commit the result.
+
+🧑‍💻 Fixing Conflicts
+---------------------
+Open each conflicted file and resolve manually. Look for markers like:
+    <<<<<<< HEAD
+    // your local changes
+    =======
+    // incoming changes from other branch
+    >>>>>>> branch-name
+
+Edit to keep the correct content and remove these markers.
+
+✅ Mark as Resolved
+-------------------
+After fixing each file:
+    git add <file>
+
+💾 Commit the Merge
+-------------------
+Finish the merge with:
+    git commit
+    # This will open the merge editor; save and close it.
+
+💡 Optional Tools
+-----------------
+Keep YOUR version:
+    git checkout --ours <file>
+    git add <file>
+
+Keep THEIR version:
+    git checkout --theirs <file>
+    git add <file>
+
+🧼 Abort the Merge
+------------------
+If you want to cancel the merge:
+    git merge --abort
+
+🧪 Example Flow
+----------------
+    git pull origin main
+    # Fix conflicts in each file manually
+    git add 1327A.cpp
+    git add 1373B.cpp
+    ...
+    git commit
+    git push origin main
+
+✅ Done!
+
+📝 Saving and Exiting in Vim During Git Merge Commit
+====================================================
+
+When Git prompts for a commit message (e.g., during a merge), it often opens the default editor: Vim.
+
+What does `:wq` mean?
+----------------------
+In Vim:
+  :w  - Writes (saves) the file.
+  :q  - Quits the editor.
+
+So, `:wq` saves your commit message and exits Vim.
+
+Steps to Use `:wq` After a Merge Conflict
+------------------------------------------
+1. Type your commit message (or leave the default one).
+2. Press `Esc` (to ensure you're not in insert mode).
+3. Type `:wq` and press `Enter`.
+
+✅ This completes the merge and exits the editor.
+
+Alternative Editors for Git
+----------------------------
+To avoid Vim and use a simpler editor like VS Code or Nano:
+
+Set VS Code as Git editor:
+    git config --global core.editor "code --wait"
+
+Set Nano as Git editor:
+    git config --global core.editor "nano"
+
+This will make Git open your preferred editor for commit messages.
+
